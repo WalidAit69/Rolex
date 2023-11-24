@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-function BurgerMenu() {
-  const [IsMenuOpen, setIsMenuOpen] = useState(false);
-
+function BurgerMenu({
+  IsMenuOpen,
+  setIsMenuOpen,
+}: {
+  IsMenuOpen: boolean;
+  setIsMenuOpen: any;
+}) {
   const controls = useAnimation();
   const rotatecontrols = useAnimation();
   const rotateminuscontrols = useAnimation();

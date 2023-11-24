@@ -4,8 +4,7 @@ import DayDate from "@/components/main/DayDate";
 import FlutedBezel from "@/components/main/FlutedBezel";
 import Perpetual from "@/components/main/Perpetual";
 import PlanetInitiative from "@/components/main/PlanetInitiative";
-import { useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [index, setindex] = useState(null);

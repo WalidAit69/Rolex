@@ -68,7 +68,7 @@ function DayDate() {
             initial={{ opacity: 0 }}
             animate={opacitycontrols}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex gap-1 justify-center mt-16 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
+            className="hover:scale-110 flex gap-1 justify-center mt-16 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
           >
             Learn more <ChevronRight />
           </motion.button>
