@@ -23,13 +23,13 @@ function FlutedBezel() {
       ycontrols.start({ y: -20, opacity: 0 });
       ycontrols2.start({ y: 20, opacity: 0 });
       opacitycontrols.start({ opacity: 0 });
-      layercontrols.start({ opacity: 1 });
+      layercontrols.start({ opacity: 0.5 });
     }
   }, [Isinview]);
 
   return (
-    <main className="fixed top-0 -z-10">
-      <section className="relative h-[100vh] bg-slate-300">
+    <main className="fixed top-0 -z-[10]">
+      <section className="relative h-[100vh] bg-[var(--green)]">
         <motion.div
           animate={layercontrols}
           className="z-20 absolute top-0 left-0 w-full h-full bg-black opacity-50"

@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../Logo";
 import { Search, MapPin, Heart } from "lucide-react";
-import BurgerMenu from "../BurgerMenu";
+import BurgerMenu from "./BurgerMenu";
 
 function Navbar() {
   return (

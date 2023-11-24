@@ -4,11 +4,12 @@ import { ChevronRight } from "lucide-react";
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-function DayDate() {
+function PlanetInitiative() {
   const ycontrols = useAnimation();
   const ycontrols2 = useAnimation();
   const opacitycontrols = useAnimation();
   const layercontrols = useAnimation();
+  const indexcontrols = useAnimation();
 
   const ref = useRef(null);
   const Isinview = useInView(ref);
@@ -28,16 +29,15 @@ function DayDate() {
   }, [Isinview]);
 
   return (
-    <main className="z-10">
+    <motion.main className="fixed top-0 -z-[10]">
       <section className="relative h-[100vh] bg-[var(--green)]">
         <motion.div
           animate={layercontrols}
           className="z-20 absolute top-0 left-0 w-full h-full bg-black opacity-50"
         ></motion.div>
-
         <video
           className="h-full object-cover"
-          src="/homepage1.webm"
+          src="/homepage4.webm"
           autoPlay
           loop
           muted
@@ -46,36 +46,36 @@ function DayDate() {
         <div
           ref={ref}
           className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]
-      text-white text-center flex flex-col"
+      text-white text-center flex flex-col gap-3"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={ycontrols2}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 1 }}
             className="text-lg uppercase"
           >
-            Oyster Perpetual
+            perpetual planet initiative
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={ycontrols}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-4xl font-bold"
+            transition={{ duration: 0.5, delay: 1 }}
+            className="text-4xl font-bold w-[250px]"
           >
-            Day-Date
+            Nnaemeka Ikegwuonu
           </motion.h1>
           <motion.button
             initial={{ opacity: 0 }}
             animate={opacitycontrols}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex gap-1 justify-center mt-16 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
+            transition={{ duration: 0.5, delay: 1 }}
+            className="flex gap-1 justify-center mt-8 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
           >
             Learn more <ChevronRight />
           </motion.button>
         </div>
       </section>
-    </main>
+    </motion.main>
   );
 }
 
-export default DayDate;
+export default PlanetInitiative;
