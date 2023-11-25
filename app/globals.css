@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.burgerMenu:hover div div {
+  background-color: rgb(134 239 172);
+}
+
 :root {
   --rolex-gold: rgba(163, 126, 44);
   --rolex-green: rgba(0, 96, 57);

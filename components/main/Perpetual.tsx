@@ -39,14 +39,14 @@ function Perpetual({ setindex }: { setindex: any }) {
   }, [Isinview, Isinview2, Isinview3]);
 
   return (
-    <main className="absolute top-[200vh] z-10">
+    <main className="absolute top-[200vh] h-[100vh] z-10">
       <section className="relative h-[100vh] bg-[var(--green)]">
         <motion.div
           animate={layercontrols}
           className="z-20 absolute top-0 left-0 w-full h-full bg-black opacity-50"
         ></motion.div>
         <video
-          className="h-full object-cover"
+          className="h-full w-full object-cover"
           src="/homepage3.webm"
           autoPlay
           loop
@@ -54,15 +54,15 @@ function Perpetual({ setindex }: { setindex: any }) {
         ></video>
 
         <div
-          className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]
-      text-white text-center flex flex-col gap-3"
+          className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[25]
+      text-white text-center flex flex-col items-center gap-3"
           ref={ref}
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={ycontrols2}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-lg uppercase"
+            className="max-lg:text-lg text-3xl uppercase"
           >
             #Perpetual
           </motion.p>
@@ -70,7 +70,7 @@ function Perpetual({ setindex }: { setindex: any }) {
             initial={{ opacity: 0, y: -20 }}
             animate={ycontrols}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-4xl font-bold w-[250px]"
+            className="max-lg:text-4xl text-8xl font-bold max-lg:w-[250px] w-[600px]"
           >
             Sustainable development
           </motion.h1>
@@ -78,7 +78,7 @@ function Perpetual({ setindex }: { setindex: any }) {
             initial={{ opacity: 0 }}
             animate={opacitycontrols}
             transition={{ duration: 0.5, delay: 1 }}
-            className="flex gap-1 justify-center mt-8 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
+            className="w-[200px] text-xl max-lg:text-base items-center bg-gray-500/10 flex gap-1 justify-center mt-8 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
           >
             Learn more <ChevronRight />
           </motion.button>

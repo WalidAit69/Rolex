@@ -9,13 +9,12 @@ import { useState } from "react";
 export default function Home() {
   const [index, setindex] = useState(null);
 
-
   return (
-    <div className="relative w-[100vw] h-[400vh] overflow-y-scroll">
+    <main className="relative w-[full] h-[400vh]">
       <DayDate />
       {!index && <FlutedBezel />}
-      <Perpetual setindex={setindex}/>
+      <Perpetual setindex={setindex} />
       {index && <PlanetInitiative />}
-    </div>
+    </main>
   );
 }

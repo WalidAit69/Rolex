@@ -36,7 +36,7 @@ function PlanetInitiative() {
           className="z-20 absolute top-0 left-0 w-full h-full bg-black opacity-50"
         ></motion.div>
         <video
-          className="h-full object-cover"
+          className="h-full w-full object-cover"
           src="/homepage4.webm"
           autoPlay
           loop
@@ -45,14 +45,14 @@ function PlanetInitiative() {
 
         <div
           ref={ref}
-          className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]
-      text-white text-center flex flex-col gap-3"
+          className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[25]
+      text-white text-center flex flex-col items-center gap-3"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={ycontrols2}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-lg uppercase"
+            className="max-lg:text-lg text-3xl uppercase"
           >
             perpetual planet initiative
           </motion.p>
@@ -60,7 +60,7 @@ function PlanetInitiative() {
             initial={{ opacity: 0, y: -20 }}
             animate={ycontrols}
             transition={{ duration: 0.5, delay: 1 }}
-            className="text-4xl font-bold w-[250px]"
+            className="max-lg:text-4xl text-8xl font-bold max-lg:w-[250px] w-[600px]"
           >
             Nnaemeka Ikegwuonu
           </motion.h1>
@@ -68,7 +68,7 @@ function PlanetInitiative() {
             initial={{ opacity: 0 }}
             animate={opacitycontrols}
             transition={{ duration: 0.5, delay: 1 }}
-            className="flex gap-1 justify-center mt-8 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
+            className="w-[200px] text-xl max-lg:text-base items-center bg-gray-500/10 flex gap-1 justify-center mt-8 font-bold bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-80 py-2 rounded-full"
           >
             Learn more <ChevronRight />
           </motion.button>
